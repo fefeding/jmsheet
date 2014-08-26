@@ -1,0 +1,169 @@
+
+   <div class="jmsheet-toolbar-panel">
+        <div class="baritem baritem2">
+            <a class="imgcommonbaritem item-undo" title="撤销" onclick="this.sheet.sheet.undo.manager.undo(); return false;"></a>
+        </div>
+        <div class="baritem baritem2">
+            <a class="imgcommonbaritem item-redo" title="恢复" onclick="this.sheet.sheet.undo.manager.redo(); return false;"></a>
+        </div>
+        <span>撤销</span>
+    </div>
+    <div class="jmsheet-toolbar-panel-sp"></div>
+    <div class="jmsheet-toolbar-panel">
+        <a class="baritem baritem1" title="粘贴" data-js="paste" onclick="javascript:alert('请使用 Ctrl + V 进行粘贴操作');">
+            <div class="imgbaritem item-paste"></div>
+            <span>粘贴</span>
+        </a>
+        <div class="side-item-container">
+            <a class="baritem baritem2" data-js="cut" title="剪切">
+                <div class="imgbaritem item-cut"></div>
+                <span>剪切</span>
+            </a>
+            <a class="baritem baritem2" data-js="copy" title="复制">
+                <div class="imgbaritem item-copy"></div>
+                <span>复制</span>
+            </a>
+        </div>
+        <span>剪切板</span>
+    </div>
+    <div class="jmsheet-toolbar-panel-sp"></div>
+    <div class="jmsheet-toolbar-panel">
+        <div class="block-item-container">
+            <div class="item-inline item-fontfamily" title="字体">
+                <select onchange="javascript:this.sheet.sheet.cellChangeStyle('font-family', this.value);">
+                    <option style="font-family:Arial;" value="Arial">Arial</option>
+                    <option style="font-family:SimSun;" value="宋体">宋体</option>
+                    <option style="font-family:LiSu;" value="隶书">隶书</option>
+                    <option style="font-family:FongSong;" value="仿宋">仿宋</option>
+                    <option style="font-family:KaiTi;" value="楷体">楷体</option>
+                    <option style="font-family:Microsoft YaHei;" value="微软雅黑">微软雅黑</option>
+                    <option style="font-family:SimHei;" value="黑体">黑体</option>
+                </select>
+            </div>
+            <div class="item-inline item-fontsize" title="字体大小">
+                <select onchange="javascript:this.sheet.sheet.cellChangeStyle('font-size', this.value + 'px');">
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                    <option value="26">26</option>
+                    <option value="28">28</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                    <option value="72">72</option>
+                </select>
+            </div>
+        </div>
+        <div class="block-item-container">
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-fontbold" onclick="this.sheet.sheet.cellStyleToggle('styleBold'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-fontitalic" onclick="this.sheet.sheet.cellStyleToggle('styleItalics'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-fontunderline" onclick="this.sheet.sheet.cellStyleToggle('styleUnderline', 'styleLineThrough'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-fontdoubleunderline" onclick="this.sheet.sheet.cellStyleToggle('styleLineThrough', 'styleUnderline'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <input class="imgbaritem item-fillcolor" type="text" data-js="fillcolor"></input>
+            </div>
+            <div class="baritem baritem3">
+                <input class="imgbaritem item-fontcolor" type="text" data-js="fontcolor"></input>
+            </div>
+        </div>
+        <span>字体</span>
+    </div>
+    <div class="jmsheet-toolbar-panel-sp"></div>
+    <div class="jmsheet-toolbar-panel">
+        <div class="block-item-container">
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-topalign" onclick="this.sheet.sheet.cellStyleToggle('styleTop', 'styleMiddle styleBottom'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-middlealign" onclick="this.sheet.sheet.cellStyleToggle('styleMiddle', 'styleTop styleBottom'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-bottomalign" onclick="this.sheet.sheet.cellStyleToggle('styleBottom', 'styleTop styleMiddle'); return false;"></a>
+            </div>
+             <div class="baritem baritem4">
+            <a onclick="this.sheet.sheet.merge(); return false;">
+                <div class="imgbaritem item-centercross"></div>
+                <span>合并单元</span></a>
+            </div>
+            <div class="baritem baritem4">
+            <a onclick="this.sheet.sheet.cellStyleToggle('styleWrap'); return false;">
+                <div class="imgbaritem item-wraptext"></div>
+                <span>自动换行</span>
+                </a>
+            </div>
+        </div>
+        <div class="block-item-container">
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-leftalign" onclick="this.sheet.sheet.cellStyleToggle('styleLeft', 'styleCenter styleRight'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-centeralign" onclick="this.sheet.sheet.cellStyleToggle('styleCenter', 'styleLeft styleRight'); return false;"></a>
+            </div>
+            <div class="baritem baritem3">
+                <a class="imgbaritem item-rightalign" onclick="this.sheet.sheet.cellStyleToggle('styleRight', 'styleLeft styleCenter'); return false;"></a>
+            </div>
+            <div class="baritem baritem4">
+            <a onclick="this.sheet.sheet.unmerge(); return false;">
+                <div class="imgbaritem item-centercross"></div>
+                <span>取消合并</span></a>
+            </div>
+           
+        </div>  
+        <span>对齐方式</span>   
+    </div>
+    <div class="jmsheet-toolbar-panel-sp"></div>
+    <div class="jmsheet-toolbar-panel">
+        <a class="baritem baritem1" title="饼图" data-js="find" onclick="javascript:this.sheet.jqSheet.setCellFormula('=MAX(B3:B8)',1,5);return false;">
+            <div class="imgchartitem item-chart-pie"></div>
+            <span>函数</span>
+        </a>               
+        <a class="baritem baritem1" title="查找" data-js="find" onclick="javascript:this.sheet.sheet.cellFind();return false;">
+            <div class="imgbaritem item-find"></div>
+            <span>查找</span>
+        </a>
+        <div class="side-item-container">
+            <a class="baritem baritem2" data-js="sortasc" title="升序排序" onclick="javascript:this.sheet.sheet.sortVerticalSingle();return false;">
+                <div class="imgbaritem item-sortasc"></div>
+                <span>升序排序</span>
+            </a>
+            <a class="baritem baritem2" data-js="sortdesc" title="降序排序" onclick="javascript:this.sheet.sheet.sortVerticalSingle(true);return false;">
+                <div class="imgbaritem item-sortdesc"></div>
+                <span>降序排序</span>
+            </a>
+        </div>
+        <span>编辑</span>
+    </div>
+    <div class="jmsheet-toolbar-panel-sp"></div>
+    <div class="jmsheet-toolbar-panel">
+    <a class="baritem baritem1" title="线图" data-js="find" onclick="javascript:this.sheet.createChart('line');return false;">
+            <div class="imgchartitem item-chart-line"></div>
+            <span>线图</span>
+        </a>    
+        <a class="baritem baritem1" title="柱图" data-js="find" onclick="javascript:this.sheet.createChart('column');return false;">
+            <div class="imgchartitem item-chart-bar"></div>
+            <span>柱图</span>
+        </a>  
+        <a class="baritem baritem1" title="饼图" data-js="find" onclick="javascript:this.sheet.createChart('pie');return false;">
+            <div class="imgchartitem item-chart-pie"></div>
+            <span>饼图</span>
+        </a>
+        <span>图表</span>
+    </div>
+    <div class="jmsheet-toolbar-panel-sp"></div>
+ 

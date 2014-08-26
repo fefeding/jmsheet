@@ -1,0 +1,452 @@
+/*工具栏*/
+.jmsheet-toolbar {		
+	color: #1E375B;
+	margin-bottom: 0;
+	padding-top: 10px;
+	padding-bottom: 4px;
+	border-top: 1px solid #8EA3BF;
+	box-shadow: 0 1px 2px #AFC0D8;
+	background-color: #DDE7F4;
+	overflow: hidden;
+	background-image: -moz-linear-gradient(top, #F1F6FC, #DDE7F4); /* Firefox */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F1F6FC), color-stop(1, #DDE7F4)); /* Saf4+, Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F1F6FC', endColorstr='#DDE7F4', GradientType='0'); /* IE*/
+}
+/*工具栏块*/
+.jmsheet-toolbar-panel {
+	min-width: 20px;
+	min-height: 40px;
+	height: 84px;
+	padding: 0;	
+	margin: 8px;
+	margin-bottom: 0;
+	display: inline-block;	
+	position: relative;	
+	vertical-align: top;	
+}
+.jmsheet-toolbar-panel span {
+	cursor: default;
+}
+.jmsheet-toolbar-panel-sp {
+	width:1px;	
+	height: 80px;
+	display: inline-block;	
+	border-right: 1px solid #fff;	
+	border-left: 1px solid #fff;	
+	background-color: #B7C0CC;
+	background-image: -moz-linear-gradient(top, #E1EAF6, #B7C0CC); /* Firefox */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E1EAF6), color-stop(1, #B7C0CC)); /* Saf4+, Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E1EAF6', endColorstr='#B7C0CC', GradientType='0'); /* IE*/
+}
+.jmsheet-toolbar-panel>span {
+	width: 100%;
+	height: 16px;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	top: 100%;
+	margin-top: -15px;
+}
+.jmsheet-toolbar-panel .side-item-container {
+	display: inline-block;
+	vertical-align: top;
+}
+.jmsheet-toolbar-panel .block-item-container {
+	display: block;
+	vertical-align: top;
+	margin-top: 4px;
+}
+.jmsheet-toolbar-panel .item-inline {
+	display: inline-block;	
+}
+
+.jmsheet-toolbar-panel .baritem {
+	font-size: 12px;
+	padding: 2px;
+	display: inline-block;	
+	vertical-align: top;
+}
+
+.jmsheet-toolbar-panel .baritem:active {
+	background-color: #3EC486;
+}
+.jmsheet-toolbar-panel .baritem:hover {
+	background-color: #C9EDB9;
+}
+/*独占二行的项*/
+.jmsheet-toolbar-panel .baritem1 .imgbaritem,
+.jmsheet-toolbar-panel .baritem1 .imgcommonbaritem,
+.jmsheet-toolbar-panel .baritem1 .imgchartitem {
+	width: 34px;
+	height: 34px;
+}
+.jmsheet-toolbar-panel .baritem1 span{
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+
+/*占一行的右边项*/
+.jmsheet-toolbar-panel .baritem2 {
+	margin: 2px 0;
+	display: block;
+}
+
+.jmsheet-toolbar-panel .baritem2 span {
+	
+}
+
+/*小图标项*/
+.jmsheet-toolbar-panel .baritem3 {
+	margin: 2px 0;
+}
+.jmsheet-toolbar-panel .baritem3 .imgbaritem ,
+.jmsheet-toolbar-panel .baritem3 .imgcommonbaritem,
+.jmsheet-toolbar-panel .baritem4 .imgbaritem,
+.jmsheet-toolbar-panel .baritem4 .imgcommonbaritem,
+.jmsheet-toolbar-panel .baritem2 .imgbaritem,
+.jmsheet-toolbar-panel .baritem2 .imgcommonbaritem {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+
+/*带文字的小图标*/
+.jmsheet-toolbar-panel .baritem4 {
+	margin: 0;
+	display: inline-block;
+}
+.jmsheet-toolbar-panel .baritem4 span {
+	display: inline-block;
+}
+
+.jmsheet-toolbar-panel .imgbaritem {
+	background-image: url(../img/EwaEdit.png);
+}
+.jmsheet-toolbar-panel .imgcommonbaritem {
+	background-image: url(../img/EwaCommon.png);
+}
+.jmsheet-toolbar-panel .imgchartitem {
+	background-image: url(../img/EwaRibbonInsert.png);
+}
+.jmsheet-toolbar-panel .item-undo {
+	background-position: -99px -125px;
+}
+.jmsheet-toolbar-panel .item-redo {
+	background-position: -63px -115px;
+}
+.jmsheet-toolbar-panel .item-paste {
+	background-position: -137px -1px;
+}
+.jmsheet-toolbar-panel .item-cut {
+	background-position: -137px -54px;
+}
+.jmsheet-toolbar-panel .item-copy {
+	background-position: -181px -145px;
+}
+/*字体*/
+.jmsheet-toolbar-panel .item-fontfamily {
+	width: 120px;
+}
+.jmsheet-toolbar-panel .item-fontfamily select {
+	width: 100%;
+}
+/*字大小*/
+.jmsheet-toolbar-panel .item-fontsize {
+	width: 80px;
+}
+.jmsheet-toolbar-panel .item-fontsize select {
+	width: 100%;
+}
+.jmsheet-toolbar-panel .item-fontbold {
+	background-position: -137px -72px;
+}
+.jmsheet-toolbar-panel .item-fontitalic {
+	background-position: -181px -127px;
+}
+.jmsheet-toolbar-panel .item-fontunderline {
+	background-position: -137px -90px;
+}
+.jmsheet-toolbar-panel .item-fontdoubleunderline {
+	background-position: -173px -109px;
+}
+.jmsheet-toolbar-panel .item-fillcolor {
+	background-color: transparent !important;
+	background-position: -173px -91px;
+	border: 0 !important;
+}
+.jmsheet-toolbar-panel .item-fontcolor {
+	background-color: transparent !important;
+	background-position: -1px -137px;
+	border: 0 !important;
+}
+
+/*对齐方式*/
+.jmsheet-toolbar-panel .item-leftalign {
+	background-position: -189px -19px;
+}
+.jmsheet-toolbar-panel .item-centeralign {
+	background-position: -109px -173px;
+}
+.jmsheet-toolbar-panel .item-rightalign {
+	background-position: -189px -1px;
+}
+.jmsheet-toolbar-panel .item-centercross {
+	background-position: -19px -137px;
+}
+.jmsheet-toolbar-panel .item-topalign {
+	background-position: -173px -55px;
+}
+.jmsheet-toolbar-panel .item-middlealign {
+	background-position: -37px -137px;
+}
+.jmsheet-toolbar-panel .item-bottomalign {
+	background-position: -174px -37px;
+}
+.jmsheet-toolbar-panel .item-wraptext {
+	background-position: -173px -73px;
+}
+.jmsheet-toolbar-panel .item-find {
+	background-position: -35px -35px;
+}
+.jmsheet-toolbar-panel .item-sortasc {
+	background-position: -155px -73px;
+}
+.jmsheet-toolbar-panel .item-sortdesc {
+	background-position: -73px -173px;
+}
+
+/*图表工具栏*/
+.jmsheet-toolbar-panel .item-chart-bar {
+	background-position: -35px -251px;
+}
+.jmsheet-toolbar-panel .item-chart-line {
+	background-position: -251px -35px;
+}
+.jmsheet-toolbar-panel .item-chart-pie {
+	background-position: -251px -140px;
+}
+
+/*单行工具栏*/
+.jmsheet-toolbar-single {
+	color: #1E375B;	
+	padding: 2px;
+	border-top: 1px solid #8EA3BF;
+	box-shadow: 0 2px 2px #AFC0D8;
+	background-color: #DDE7F4;
+	background-image: -moz-linear-gradient(top, #F1F6FC, #DDE7F4); /* Firefox */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F1F6FC), color-stop(1, #DDE7F4)); /* Saf4+, Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F1F6FC', endColorstr='#DDE7F4', GradientType='0'); /* IE*/
+}
+.jmsheet-toolbar-single > ul {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.jmsheet-toolbar-single > ul:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+
+.jmsheet-toolbar-single > ul li {		
+	float: left;
+}
+.jmsheet-toolbar-single > ul li > a {
+	width: 21px;
+	height: 21px;
+	display: inline-block;
+	background-image: url(../img/ToolIcons.gif);
+}
+
+/*单行工具栏 - end*/
+
+
+/*表格头部样式*/
+.ui-widget-header {
+  background: #DEE6F1 !important;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {
+border: 2px solid #05743E !important;
+background: #DBF7EA !important;
+color: #363636;
+}
+.ui-widget-header .ui-state-highlight {
+	background: #64796F !important;
+}
+
+.jQuerySheet {
+	min-height: 200px;
+}
+
+/*图表样式重置.jSParent .jSChart
+.jSParent .jSChart {
+	position: absolute;
+	width: 500px!important;
+	height: 400px!important;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 0 0 2px #ddd;	
+}
+.jSParent .jSChart svg {
+	
+}
+
+.jSParent .jS td.jSBarLeft {
+	width: 60px !important;
+}*/
+
+.jSParent .jS td {
+	padding: 2px 4px;
+}
+
+.jSParent .jSEnclosure {
+	overflow: hidden;
+}
+.jmSheet-chart-parent {
+	min-width: 200px;
+	min-height: 150px;
+	cursor: default;
+}
+.jSParent .ui-widget-header {
+	font-weight: normal;
+}
+.jSParent .jS td.jSBarCorner{
+	width: 40px !important;
+}
+/*右健菜单*/
+.jSParent .jSTdMenu {
+
+}
+.jSParent .jSBarTopMenuButton {
+	background: none!important;
+}
+
+/*菜单*/
+.jmSheet-menu{
+    position:absolute;
+    display:none;
+     box-shadow: 2px 2px 10px black; 
+    -webkit-box-shadow: 2px 2px 10px black; 
+    -moz-box-shadow: 2px 2px 10px black;
+    z-index:1000000;
+}
+
+/*菜单项*/
+.jmSheet-menu ul{
+    list-style: none;  
+    min-width:90px;  
+    margin:0;
+    padding:0;
+    padding:4px 4px;    
+    border:1px solid #fff; 
+    background-color:#fff;
+    filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9; 
+    border-radius:4px;
+    -moz-border-radius: 4px; 
+-webkit-border-radius: 4px;
+ box-shadow: inset 0 0 1px #000;
+     -webkit-box-shadow: inset 0 0 1px #000;
+    -moz-box-shadow: inset 0 0 1px #000;
+}
+
+.jmSheet-menu ul li{
+    text-decoration: none;
+    padding: 1px;
+    font-size:12px;
+    color: #2452ac;
+    cursor:pointer;    
+    display:block;
+    line-height:20px;
+    height:20px;    
+    border-top:1px solid #e2e2e2;
+}
+.jmSheet-menu ul li:first-child{
+    border-top:none;
+}
+.jmSheet-menu ul li:hover{
+    background-color:#ccc;
+}
+
+.jmSheet-window {
+	position: absolute;
+	z-index: 50;
+	background-color: #fff;
+	border: 1px solid #000;
+	box-shadow: 0 0 1px #ccc;
+	padding: 4px 2px 2px 2px;	
+}
+
+/*chart弹窗样式重置*/
+.chart-dialog .ui-dialog-titlebar {
+	padding: 2px !important;
+}
+.chart-dialog .ui-dialog-title {
+	font-size: 12px;
+}
+/*按钮*/
+.chart-dialog .ui-button-text-only .ui-button-text{
+	padding: 4px!important;
+}
+/*按钮栏*/
+.chart-dialog .ui-dialog-buttonpane {
+	padding: 2px!important;
+}
+/*图表配置窗*/
+.jmsheet-chartconfig {
+	font-size: 14px;
+}
+.jmsheet-chartconfig >div {
+	margin: 2px 0;
+}
+.jmsheet-chartconfig >div>span {
+	width: 80px;
+	text-align: right;
+	display: inline-block;
+	margin-right: 2px;
+	line-height: 26px;
+}
+.jmsheet-chartconfig >div>input {
+	width: 250px;
+	height: 26px;
+	padding: 0;
+	border: 1px solid #ABADB3;
+}
+
+/*数据源选择框弹窗重置样式*/
+.dialog-datasource .ui-dialog-content {
+	padding: 0!important;
+}
+.dialog-datasource .ui-dialog-titlebar {
+	padding: 0 !important;
+}
+.dialog-datasource .ui-dialog-title {
+	font-size: 12px;
+}
+
+/*自定义输入框*/
+.jmsheet-chartconfig div.input-container {	
+	display: inline-block;
+   border: 1px solid #ABADB3;
+   height: 26px;
+   width: 250px;
+}
+
+.jmsheet-chartconfig div.input-container:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.jmsheet-chartconfig div.input-container * {
+	float:left;
+	padding: 2px 0;
+}
+.jmsheet-chartconfig div.input-container img {
+	width: 22px;
+	height: 22px;
+	float: right;
+}
+.jmsheet-chartconfig div.input-container img:hover {
+	width: 20px;
+	height: 20px;
+}
+.jmsheet-chartconfig div.input-container input {
+	border: 0;
+	width: 220px;
+	background-color: transparent;
+}
